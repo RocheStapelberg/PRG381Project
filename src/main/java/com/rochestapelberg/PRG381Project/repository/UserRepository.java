@@ -3,7 +3,7 @@ package com.rochestapelberg.PRG381Project.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.rochestapelberg.PRG381Project.Model.User;
+import com.rochestapelberg.PRG381Project.model.User;
 
 import java.util.List;
 import java.util.Optional;

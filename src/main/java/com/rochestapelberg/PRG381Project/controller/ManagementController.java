@@ -1,13 +1,12 @@
 package com.rochestapelberg.PRG381Project.controller;
 
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.rochestapelberg.PRG381Project.Model.User;
+import com.rochestapelberg.PRG381Project.model.User;
 import com.rochestapelberg.PRG381Project.auth.ApplicationUserService;
 
 import java.util.List;
@@ -20,7 +19,7 @@ public class ManagementController {
     private ApplicationUserService service;
 
     @GetMapping()
-    public String viewHomePage(@NotNull Model model){
+    public String viewHomePage(Model model){
         List<User> studentList = service.loadStudents();
         model.addAttribute("studentList", studentList);
         return "adminView";

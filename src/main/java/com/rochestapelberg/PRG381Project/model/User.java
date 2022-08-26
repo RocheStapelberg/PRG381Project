@@ -1,4 +1,4 @@
-package com.rochestapelberg.PRG381Project.Model;
+package com.rochestapelberg.PRG381Project.model;
 
 import javax.persistence.*;
 

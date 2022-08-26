@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+    <title>Portal</title>
+</head>
+<body>
+    <h1 class="text-center text-light">Portal</h1>
+    <br>
+    <div style="width: 500px; margin: 0 auto;">
+        <form class="form-group" method="get" action="/admin/api/student/">
+            <button class="btn btn-lg btn-success btn-center btn-block" type="submit">Admin Dashboard</button>
+        </form>
+    </div>
+    <div style="width: 500px; margin: 0 auto;">
+        <form class="form-group" method="" action="/student/api/">
+            <button class="btn btn-lg btn-primary btn-center btn-block" type="submit">Student Dashboard</button>
+        </form>
+    </div>
+    <div style="width: 500px; margin: 0 auto;">
+        <form class="form-group" method="" action="/logout">
+            <button class="btn btn-lg btn-danger btn-center btn-block" type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

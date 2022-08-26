@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Register new Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+    <link th:href="@{/css/main.css}" rel="stylesheet"/>
+</head>
+<body>
+<div>
+    <br>
+    <h1 class="text-center text-light">Register Student</h1>
+    <br />
+    <div style="width: 600px; margin:0 auto;">
+        <form class="text-light" action="#" th:action="@{/admin/api/student/save}" th:object="${student}" method="post">
+            <div>
+                <tr>
+                    <label class="form-label" >Student Name</label>
+                    <td>
+                        <input type="hidden" th:field="*{id}" />
+                        <input type="text" th:field="*{name}" class="form-control" placeholder="Name" />
+                    </td>
+                </tr>
+                <tr>
+                    <label class="form-label" >Student Username</label>
+                    <td>
+                        <input type="hidden" th:field="*{id}" />
+                        <input type="text" th:field="*{userName}" class="form-control" placeholder="Username"/>
+                    </td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <label class="form-label" >Student Password</label>
+                    <td>
+                        <input type="hidden" th:field="*{id}" />
+                        <input type="text" th:field="*{password}"  class="form-control" placeholder="Password" />
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <label class="form-label" >Student Address</label>
+                    <td><input type="text" th:field="*{address}" class="form-control" placeholder="Address" /></td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <label class="form-label" >Student Email</label>
+                    <td><input type="text" th:field="*{contact}" class="form-control" placeholder="Email" /></td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <label class="form-label" >Student Course</label>
+                    <td><input type="text" th:field="*{course}" class="form-control" placeholder="Course" /></td>
+                </tr>
+            </div>
+            <br>
+            <tr>
+                <td colspan="4"><button type="submit" class="btn btn-primary btn-block">Save</button> </td>
+            </tr>
+            </table>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

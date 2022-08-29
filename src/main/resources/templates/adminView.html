@@ -35,7 +35,7 @@
             </tr>
             </thead>
             <tbody>
-
+            <!--Gets list of model and displays on page-->
             <tr  th:each="student : ${studentList}">
                 <td th:text="${student.id}">Student ID</td>
                 <td th:text="${student.active}">Active Student</td>
@@ -46,9 +46,11 @@
                 <td th:text="${student.userName}">Username</td>
                 <td th:text="${student.roles}">Role in database</td>
                 <td>
+                    <!-- Redirects to edit page with student id-->
                     <a th:href="@{'/admin/api/student/edit/' + ${student.id}}">Edit</a>
                 </td>
                 <td>
+                    <!-- Redirects to delete API endpoint using id as parameter-->
                     <a th:href="@{'/admin/api/student/delete/' + ${student.id}}">Delete</a>
                 </td>
             </tr>
